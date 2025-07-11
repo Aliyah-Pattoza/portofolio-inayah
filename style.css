@@ -351,6 +351,15 @@ body {
     margin-bottom: 10px;
 }
 
+.meta-value {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.meta-value a {
+    word-break: break-word;
+}
+
 .meta-label {
     color: var(--primary-color);
     font-weight: 600;
