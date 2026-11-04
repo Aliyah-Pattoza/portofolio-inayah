@@ -3,33 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Andi Aliyah - Portfolio</title>
+    <title>Andi Aliyah — Portfolio</title>
+    <meta name="description" content="Portfolio of Andi Aliyah Nur Inayah Pattoza — Informatics Engineering graduate from ITS Surabaya, focused on accessible and AI-powered digital solutions.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+    <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+    <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+    <div class="bg-atmosphere" aria-hidden="true">
+        <span class="orb orb-1"></span>
+        <span class="orb orb-2"></span>
+        <span class="orb orb-3"></span>
+        <span class="grid-overlay"></span>
+        <span class="noise-overlay"></span>
+    </div>
+
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand" href="#home">Portfolio</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <a class="navbar-brand" href="#home">Portofolio<span>.</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -39,21 +46,50 @@
         <!-- Hero Section -->
         <section class="hero" id="home">
             <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-12">
-                        <h3>Hello, It's Me</h3>
-                        <h1>Andi Aliyah Nur Inayah Pattoza</h1>
-                        <h3>And I'm a <span class="highlight text-typing"></span></h3>
-                        <p class="lead mb-4 text-light">I'm a passionate informatics engineering student at the Sepuluh Nopember Institute of Technology, driven to develop impactful digital solutions through innovative thinking and modern technologies.</p>
-                        
-                        <div class="social-links mb-4">
-                            <a href="https://www.facebook.com/profile.php?id=100008836154950&mibextid=ZbWKwL"><i class='bx bxl-facebook'></i></a>
-                            <a href="https://instagram.com/andialiyaah_?igshid=NGVhN2U2NjQ0Yg=="><i class='bx bxl-instagram'></i></a>
-                            <a href="https://wa.me/+6281341394715"><i class='bx bxl-whatsapp'></i></a>
-                            <a href="https://www.linkedin.com/in/andi-aliyah-nur-inayah-pattoza-0b2992219/"><i class='bx bxl-linkedin'></i></a>
+                <div class="hero-grid">
+                    <p class="hero-kicker reveal">Informatics Engineering Graduate · ITS Class of 2026</p>
+                    <h1 class="hero-name reveal">
+                        <span class="hero-name-line">Andi Aliyah</span>
+                        <span class="hero-name-line accent">Nur Inayah Pattoza</span>
+                    </h1>
+                    <div class="hero-visual reveal delay-1">
+                        <div class="hero-portrait">
+                            <div class="portrait-decor" aria-hidden="true">
+                                <span class="decor-glow"></span>
+                                <span class="decor-ring decor-ring-outer"></span>
+                                <span class="decor-ring decor-ring-dashed"></span>
+                                <span class="decor-orbit">
+                                    <i class="decor-orbit-dot"></i>
+                                </span>
+                                <span class="decor-dot decor-dot-1"></span>
+                                <span class="decor-dot decor-dot-2"></span>
+                                <span class="decor-dot decor-dot-3"></span>
+                                <span class="decor-line decor-line-1"></span>
+                                <span class="decor-line decor-line-2"></span>
+                                <span class="decor-bracket decor-bracket-tl"></span>
+                                <span class="decor-bracket decor-bracket-br"></span>
+                            </div>
+                            <div class="hero-portrait-media">
+                                <img src="Inayah.jpg" alt="Andi Aliyah Nur Inayah Pattoza">
+                            </div>
+                            <div class="portrait-frame" aria-hidden="true"></div>
+                            <div class="portrait-chip">Open to opportunities</div>
                         </div>
-                        
-                        <a href="#about" class="btn btn-primary-custom">More About Me</a>
+                    </div>
+                    <div class="hero-body reveal">
+                        <p class="hero-role">I'm a <span class="highlight text-typing"></span></p>
+                        <p class="hero-lead">I design and build digital products that combine accessibility, AI, and solid engineering — from research prototypes to real-world platforms.</p>
+                        <div class="hero-actions">
+                            <a href="#projects" class="btn btn-primary-custom magnetic">View Projects</a>
+                            <a href="#contact" class="btn btn-ghost magnetic">Get in Touch</a>
+                        </div>
+                        <div class="social-links hero-social">
+                            <a href="https://www.facebook.com/profile.php?id=100008836154950&mibextid=ZbWKwL" aria-label="Facebook"><i class='bx bxl-facebook'></i></a>
+                            <a href="https://instagram.com/andialiyaah_?igshid=NGVhN2U2NjQ0Yg==" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
+                            <a href="https://wa.me/+6281341394715" aria-label="WhatsApp"><i class='bx bxl-whatsapp'></i></a>
+                            <a href="https://www.linkedin.com/in/andi-aliyah-nur-inayah-0b2992219/" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                            <a href="https://github.com/Aliyah-Pattoza" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -62,84 +98,50 @@
         <!-- About Section -->
         <section class="about-section" id="about">
             <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-5 text-center mb-4 mb-lg-0">
-                        <div class="about-img">
-                            <img src="Inayah.jpg" alt="Profile" class="img-fluid">
-                        </div>
-                    </div>
-                    <div class="col-lg-7">
-                        <h2 class="section-title">About Me</h2>
-                        <h4 class="section-subtitle">Let's know me!</h4>
-                        <p class="text-light mb-4">Hi! I'm a 6th-semester Informatics Engineering student at ITS Surabaya. Coming from Makassar, I'm passionate about technology and love diving into new tools and programming languages to keep improving myself.</p>
-                        
-                        <!-- Skills Section -->
-                        <div class="skills-section mb-4">
-                            <h5 class="skills-title mb-3">Technical Skills</h5>
-                            <div class="skills-grid">
-                                <div class="skill-item">
-                                    <i class='bx bxl-html5'></i>
-                                    <span>HTML</span>
-                                </div>
-                                <div class="skill-item">
-                                    <i class='bx bxl-css3'></i>
-                                    <span>CSS</span>
-                                </div>
-                                <div class="skill-item">
-                                    <i class='bx bxl-javascript'></i>
-                                    <span>JavaScript</span>
-                                </div>
-                                <div class="skill-item">
-                                    <i class='bx bxl-python'></i>
-                                    <span>Python</span>
-                                </div>
-                                <div class="skill-item">
-                                    <i class='bx bxl-c-plus-plus'></i>
-                                    <span>C</span>
-                                </div>
-                                <div class="skill-item">
-                                    <i class='bx bxl-c-plus-plus'></i>
-                                    <span>C++</span>
-                                </div>
-                                <div class="skill-item">
-                                    <i class='bx bx-data'></i>
-                                    <span>SQL</span>
-                                </div>
-                                <div class="skill-item">
-                                    <i class='bx bxl-git'></i>
-                                    <span>Git</span>
-                                </div>
-                                <div class="skill-item">
-                                    <i class='bx bxl-php'></i>
-                                    <span>PHP</span>
-                                </div>
-                                <div class="skill-item">
-                                    <i class='bx bx-code-block'></i>
-                                    <span>Laravel</span>
-                                </div>
-                                <div class="skill-item">
-                                    <i class='bx bxl-figma'></i>
-                                    <span>Figma</span>
-                                </div>
-                                <div class="skill-item">
-                                    <i class='bx bx-code-curly'></i>
-                                    <span>Go</span>
-                                </div>
-                                <div class="skill-item">
-                                    <i class='bx bx-joystick'></i>
-                                    <span>Ren'Py</span>
-                                </div>
-                                <div class="skill-item">
-                                    <i class='bx bxl-java'></i>
-                                    <span>Java</span>
-                                </div>
-                                <div class="skill-item">
-                                    <i class='bx bx-network-chart'></i>
-                                    <span>GNS3</span>
-                                </div>
+                <div class="section-heading reveal">
+                    <p class="section-eyebrow">About</p>
+                    <h2 class="section-title">Building technology that people can actually use</h2>
+                </div>
+                <div class="about-layout">
+                    <div class="about-story reveal">
+                        <p class="about-lead">I'm an Informatics Engineering graduate from Institut Teknologi Sepuluh Nopember (ITS), Class of 2026, originally from Makassar. I enjoy turning complex ideas into clear, usable systems — from client websites and institutional platforms to AI-assisted tools and accessible learning products.</p>
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <strong>14+</strong>
+                                <span>Featured Projects</span>
+                            </div>
+                            <div class="stat-item">
+                                <strong>AI + Web</strong>
+                                <span>Core Focus</span>
+                            </div>
+                            <div class="stat-item">
+                                <strong>2026</strong>
+                                <span>ITS Graduate</span>
                             </div>
                         </div>
-                        <a href="#projects" class="btn btn-primary-custom">View My Projects</a>
+                        <a href="#projects" class="btn btn-primary-custom magnetic">See Selected Work</a>
+                    </div>
+                    <div class="about-skills reveal delay-1">
+                        <h3 class="skills-title">Technical Skills</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item"><i class='bx bxl-html5'></i><span>HTML</span></div>
+                            <div class="skill-item"><i class='bx bxl-css3'></i><span>CSS</span></div>
+                            <div class="skill-item"><i class='bx bxl-javascript'></i><span>JavaScript</span></div>
+                            <div class="skill-item"><i class='bx bxl-python'></i><span>Python</span></div>
+                            <div class="skill-item"><i class='bx bxl-c-plus-plus'></i><span>C</span></div>
+                            <div class="skill-item"><i class='bx bxl-c-plus-plus'></i><span>C++</span></div>
+                            <div class="skill-item"><i class='bx bx-data'></i><span>MySQL</span></div>
+                            <div class="skill-item"><i class='bx bxl-git'></i><span>Git</span></div>
+                            <div class="skill-item"><i class='bx bxl-php'></i><span>PHP</span></div>
+                            <div class="skill-item"><i class='bx bx-code-block'></i><span>Laravel</span></div>
+                            <div class="skill-item"><i class='bx bxl-figma'></i><span>Figma</span></div>
+                            <div class="skill-item"><i class='bx bx-code-curly'></i><span>Go</span></div>
+                            <div class="skill-item"><i class='bx bx-joystick'></i><span>Ren'Py</span></div>
+                            <div class="skill-item"><i class='bx bxl-java'></i><span>Java</span></div>
+                            <div class="skill-item"><i class='bx bx-network-chart'></i><span>GNS3</span></div>
+                            <div class="skill-item"><i class='bx bxl-react'></i><span>React</span></div>
+                            <div class="skill-item"><i class='bx bx-brain'></i><span>ML / NLP</span></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -148,93 +150,259 @@
         <!-- Projects Section -->
         <section class="projects-section" id="projects">
             <div class="container">
-                <h2 class="section-title text-center">Academic Projects</h2>
-                <div class="row g-4">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="project-card">
+                <div class="section-heading reveal">
+                    <p class="section-eyebrow">Selected Work</p>
+                    <h2 class="section-title">A few projects I'm proud of</h2>
+                </div>
+                <div class="project-filters reveal" role="tablist" aria-label="Filter projects">
+                    <button type="button" class="project-filter active" data-filter="all">All</button>
+                    <button type="button" class="project-filter" data-filter="thesis">Thesis</button>
+                    <button type="button" class="project-filter" data-filter="internship">Internship</button>
+                    <button type="button" class="project-filter" data-filter="client">Client Work</button>
+                    <button type="button" class="project-filter" data-filter="competition">Competition</button>
+                    <button type="button" class="project-filter" data-filter="academic">Academic</button>
+                </div>
+                <div class="row g-4" id="projectGrid">
+                    <div class="col-lg-4 col-md-6 project-col" data-category="thesis">
+                        <article class="project-card tilt-card reveal">
+                            <div class="project-card-top">
+                                <span class="semester-badge">Thesis 2026</span>
+                                <span class="project-index">01</span>
+                            </div>
+                            <h3 class="project-title">RAST – Judging Student Submission Tool</h3>
+                            <p class="text-light">A decision-support platform that helps lecturers review essay submissions using NLP and Transformer models for AI detection, relevance, peer similarity, and writing style.</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">FastAPI</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">DeBERTa</span>
+                            </div>
+                            <a href="#" class="project-link" onclick="showProjectDetail('project8')">View Details <i class='bx bx-right-arrow-alt'></i></a>
+                        </article>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 project-col" data-category="competition">
+                        <article class="project-card tilt-card reveal">
+                            <div class="project-card-top">
+                                <span class="semester-badge">GEMASTIK 2025</span>
+                                <span class="project-index">02</span>
+                            </div>
+                            <h3 class="project-title">Inkluvia – Accessible Learning Platform</h3>
+                            <p class="text-light">An inclusive learning platform that helps visually impaired teachers access materials through AI-powered PDF conversion, screen reader support, and Braille device integration.</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Laravel</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Gemini API</span>
+                                <span class="tech-tag">MQTT</span>
+                            </div>
+                            <a href="#" class="project-link" onclick="showProjectDetail('project7')">View Details <i class='bx bx-right-arrow-alt'></i></a>
+                        </article>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 project-col" data-category="internship">
+                        <article class="project-card tilt-card reveal">
+                            <div class="project-card-top">
+                                <span class="semester-badge">Internship 2025</span>
+                                <span class="project-index">03</span>
+                            </div>
+                            <h3 class="project-title">Secure Verification App</h3>
+                            <p class="text-light">A mobile transaction approval system that uses face recognition to authenticate users before reviewing, approving, or rejecting pending requests.</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Flutter</span>
+                                <span class="tech-tag">Dart</span>
+                                <span class="tech-tag">REST API</span>
+                                <span class="tech-tag">Face Recognition</span>
+                            </div>
+                            <a href="#" class="project-link" onclick="showProjectDetail('project9')">View Details <i class='bx bx-right-arrow-alt'></i></a>
+                        </article>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 project-col" data-category="academic">
+                        <article class="project-card tilt-card reveal">
+                            <div class="project-card-top">
+                                <span class="semester-badge">Semester 6</span>
+                                <span class="project-index">04</span>
+                            </div>
                             <h3 class="project-title">NoReact – Allergen Detection App</h3>
-                            <div class="semester-badge">Semester 6</div>
-                            <p class="text-light">NoReact mobile application was developed for the purpose of assisting users in the detection of potential food allergens through the scanning of food images.</p>
+                            <p class="text-light">Mobile app that detects potential food allergens by scanning food images with AI assistance.</p>
                             <div class="tech-stack">
                                 <span class="tech-tag">Java</span>
                                 <span class="tech-tag">Android Studio</span>
                                 <span class="tech-tag">Roboflow</span>
                                 <span class="tech-tag">Firebase</span>
                             </div>
-                            <a href="#" class="project-link" onclick="showProjectDetail('project1')">View Details →</a>
-                        </div>
+                            <a href="#" class="project-link" onclick="showProjectDetail('project1')">View Details <i class='bx bx-right-arrow-alt'></i></a>
+                        </article>
                     </div>
 
-                    <div class="col-lg-4 col-md-6">
-                        <div class="project-card">
+                    <div class="col-lg-4 col-md-6 project-col" data-category="academic">
+                        <article class="project-card tilt-card reveal">
+                            <div class="project-card-top">
+                                <span class="semester-badge">Semester 6</span>
+                                <span class="project-index">05</span>
+                            </div>
                             <h3 class="project-title">GAYOCRAFT - Game Visual Novel</h3>
-                            <div class="semester-badge">Semester 6</div>
-                            <p class="text-light">GAYOCRAFT is an educational simulation game developed using Ren'Py. This game offers players the opportunity to engage in a virtual journey to become a successful Gayo coffee farmer in Aceh.</p>
+                            <p class="text-light">Educational simulation game that takes players on a journey to become a successful Gayo coffee farmer in Aceh.</p>
                             <div class="tech-stack">
                                 <span class="tech-tag">RenPy</span>
                                 <span class="tech-tag">Game Development</span>
                             </div>
-                            <a href="#" class="project-link" onclick="showProjectDetail('project2')">View Details →</a>
-                        </div>
+                            <a href="#" class="project-link" onclick="showProjectDetail('project2')">View Details <i class='bx bx-right-arrow-alt'></i></a>
+                        </article>
                     </div>
 
-                    <div class="col-lg-4 col-md-6">
-                        <div class="project-card">
+                    <div class="col-lg-4 col-md-6 project-col" data-category="academic">
+                        <article class="project-card tilt-card reveal">
+                            <div class="project-card-top">
+                                <span class="semester-badge">Semester 6</span>
+                                <span class="project-index">06</span>
+                            </div>
                             <h3 class="project-title">Study Buddy</h3>
-                            <div class="semester-badge">Semester 6</div>
-                            <p class="text-light">Developed Study Buddy, a mobile application designed as an Academic-First Messaging Platform that integrates academic communication, task management, and collaborative learning into one unified ecosystem.</p>
+                            <p class="text-light">Academic-first messaging platform that unifies communication, task management, and collaborative learning.</p>
                             <div class="tech-stack">
                                 <span class="tech-tag">Python</span>
                                 <span class="tech-tag">Figma</span>
                                 <span class="tech-tag">UML</span>
-                                <span class="tech-tag">Use Case Diagram</span>
                             </div>
-                            <a href="#" class="project-link" onclick="showProjectDetail('project3')">View Details →</a>
-                        </div>
+                            <a href="#" class="project-link" onclick="showProjectDetail('project3')">View Details <i class='bx bx-right-arrow-alt'></i></a>
+                        </article>
                     </div>
 
-                    <div class="col-lg-4 col-md-6">
-                        <div class="project-card">
+                    <div class="col-lg-4 col-md-6 project-col" data-category="academic">
+                        <article class="project-card tilt-card reveal">
+                            <div class="project-card-top">
+                                <span class="semester-badge">Semester 6</span>
+                                <span class="project-index">07</span>
+                            </div>
                             <h3 class="project-title">SOS Game</h3>
-                            <div class="semester-badge">Semester 6</div>
-                            <p class="text-light">Create an SOS Game using Python and socket programming, which allows players to play in real-time in one room with a score system based on the formation of the word “S-O-S”.</p>
+                            <p class="text-light">Interactive game experience built with Python and PyGame for academic coursework.</p>
                             <div class="tech-stack">
                                 <span class="tech-tag">Python</span>
                                 <span class="tech-tag">PyGame</span>
-                                <span class="tech-tag">Socket Programming</span>
-                                <span class="tech-tag">Threading</span>
                             </div>
-                            <a href="#" class="project-link" onclick="showProjectDetail('project4')">View Details →</a>
-                        </div>
+                            <a href="#" class="project-link" onclick="showProjectDetail('project4')">View Details <i class='bx bx-right-arrow-alt'></i></a>
+                        </article>
                     </div>
 
-                    <div class="col-lg-4 col-md-6">
-                        <div class="project-card">
+                    <div class="col-lg-4 col-md-6 project-col" data-category="academic">
+                        <article class="project-card tilt-card reveal">
+                            <div class="project-card-top">
+                                <span class="semester-badge">Semester 5</span>
+                                <span class="project-index">08</span>
+                            </div>
                             <h3 class="project-title">Pawfee</h3>
-                            <div class="semester-badge">Semester 5</div>
-                            <p class="text-light">Created a cafe web application called Pawfee, developed using Golang, which enables users to place food and drink orders, make table reservations, and manage their interactions with the cafe entirely online.</p>
+                            <p class="text-light">Backend-focused academic project built with Go, Gin, and Gorm.</p>
                             <div class="tech-stack">
-                                <span class="tech-tag">GO</span>
+                                <span class="tech-tag">Go</span>
                                 <span class="tech-tag">Gin</span>
                                 <span class="tech-tag">Gorm</span>
-                                <span class="tech-tag">MYSQL</span>
                             </div>
-                            <a href="#" class="project-link" onclick="showProjectDetail('project5')">View Details →</a>
-                        </div>
+                            <a href="#" class="project-link" onclick="showProjectDetail('project5')">View Details <i class='bx bx-right-arrow-alt'></i></a>
+                        </article>
                     </div>
 
-                    <div class="col-lg-4 col-md-6">
-                        <div class="project-card">
+                    <div class="col-lg-4 col-md-6 project-col" data-category="academic">
+                        <article class="project-card tilt-card reveal">
+                            <div class="project-card-top">
+                                <span class="semester-badge">Semester 3</span>
+                                <span class="project-index">09</span>
+                            </div>
                             <h3 class="project-title">PETET - Petualangan Teman TK</h3>
-                            <div class="semester-badge">Semester 3</div>
-                            <p class="text-light">PETET is a Java-based 2D educational game that invites the player, a kindergartner, on an adventure to collect school supplies while avoiding obstacles to reach the school with the best score.</p>
+                            <p class="text-light">Java-based 2D educational game where a kindergartner collects school supplies while avoiding obstacles.</p>
                             <div class="tech-stack">
                                 <span class="tech-tag">Java</span>
                                 <span class="tech-tag">2D Game</span>
                                 <span class="tech-tag">OOP</span>
                             </div>
-                            <a href="#" class="project-link" onclick="showProjectDetail('project6')">View Details →</a>
-                        </div>
+                            <a href="#" class="project-link" onclick="showProjectDetail('project6')">View Details <i class='bx bx-right-arrow-alt'></i></a>
+                        </article>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 project-col" data-category="client">
+                        <article class="project-card tilt-card reveal">
+                            <div class="project-card-top">
+                                <span class="semester-badge">Client Work</span>
+                                <span class="project-index">10</span>
+                            </div>
+                            <h3 class="project-title">SDY NET</h3>
+                            <p class="text-light">A clean ISP landing page for internet packages, installation promo, and WhatsApp-based registration.</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                            <a href="#" class="project-link" onclick="showProjectDetail('project10')">View Details <i class='bx bx-right-arrow-alt'></i></a>
+                        </article>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 project-col" data-category="client">
+                        <article class="project-card tilt-card reveal">
+                            <div class="project-card-top">
+                                <span class="semester-badge">Client Work</span>
+                                <span class="project-index">11</span>
+                            </div>
+                            <h3 class="project-title">Klinik Pratama Farida Farma</h3>
+                            <p class="text-light">Clinic website covering services, doctor schedules, promotions, FAQ, and location information for patients in Jeneponto.</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                            <a href="#" class="project-link" onclick="showProjectDetail('project11')">View Details <i class='bx bx-right-arrow-alt'></i></a>
+                        </article>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 project-col" data-category="client">
+                        <article class="project-card tilt-card reveal">
+                            <div class="project-card-top">
+                                <span class="semester-badge">Client Work</span>
+                                <span class="project-index">12</span>
+                            </div>
+                            <h3 class="project-title">Klinik Utama Sasha</h3>
+                            <p class="text-light">A wellness clinic website for nutrition, aesthetic, and medical services, with pharmacy information and visit guidance.</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                            <a href="#" class="project-link" onclick="showProjectDetail('project12')">View Details <i class='bx bx-right-arrow-alt'></i></a>
+                        </article>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 project-col" data-category="client">
+                        <article class="project-card tilt-card reveal">
+                            <div class="project-card-top">
+                                <span class="semester-badge">Client Work</span>
+                                <span class="project-index">13</span>
+                            </div>
+                            <h3 class="project-title">RSUD Rumbia</h3>
+                            <p class="text-light">Hospital website with emergency services, polyclinic schedules, bed information, and public health content for RSUD Rumbia.</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">PHP</span>
+                            </div>
+                            <a href="#" class="project-link" onclick="showProjectDetail('project13')">View Details <i class='bx bx-right-arrow-alt'></i></a>
+                        </article>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 project-col" data-category="client">
+                        <article class="project-card tilt-card reveal">
+                            <div class="project-card-top">
+                                <span class="semester-badge">Client Work</span>
+                                <span class="project-index">14</span>
+                            </div>
+                            <h3 class="project-title">Koperasi Lanto</h3>
+                            <p class="text-light">A digital cooperative platform for hospital staff to manage savings, apply for loans, and track SHU estimates online.</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">PHP</span>
+                            </div>
+                            <a href="#" class="project-link" onclick="showProjectDetail('project14')">View Details <i class='bx bx-right-arrow-alt'></i></a>
+                        </article>
                     </div>
                 </div>
             </div>
@@ -243,52 +411,61 @@
         <!-- Contact Section -->
         <section class="contact-section" id="contact">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 mb-4 mb-lg-0">
-                        <h2 class="section-title">Contact Me</h2>
-                        <h4 class="section-subtitle">Let's Work Together</h4>
-                        <p class="text-light mb-4">I'm always open to discussing new opportunities, collaborations, or just having a chat about technology and programming. Feel free to reach out!</p>
-                        
+                <div class="section-heading reveal">
+                    <p class="section-eyebrow">Contact</p>
+                    <h2 class="section-title">Let's connect</h2>
+                </div>
+                <div class="contact-layout">
+                    <div class="contact-panel reveal">
+                        <p class="contact-copy">I'm open to full-time roles, freelance work, and collaborations. Feel free to reach out if you'd like to talk about technology, product ideas, or potential opportunities.</p>
                         <div class="contact-info">
-                            <div class="mb-3">
-                                <i class="bx bxs-envelope"></i>andialiyahnurinayah@gmail.com
-                            </div>
-                            <div class="mb-3">
-                                <i class="bx bxs-phone"></i>+62 813-4139-4715
-                            </div>
-                            <div class="mb-4">
-                                <i class="bx bxs-location-plus"></i>Surabaya, East Java, Indonesia
+                            <a class="contact-row" href="mailto:andialiyahnurinayah@gmail.com">
+                                <i class="bx bxs-envelope"></i>
+                                <span>andialiyahnurinayah@gmail.com</span>
+                            </a>
+                            <a class="contact-row" href="https://wa.me/+6281341394715">
+                                <i class="bx bxs-phone"></i>
+                                <span>+62 813-4139-4715</span>
+                            </a>
+                            <div class="contact-row static">
+                                <i class="bx bxs-location-plus"></i>
+                                <span>Surabaya, East Java, Indonesia</span>
                             </div>
                         </div>
-                        
                         <div class="social-links">
-                            <a href="https://www.facebook.com/profile.php?id=100008836154950&mibextid=ZbWKwL"><i class='bx bxl-facebook'></i></a>
-                            <a href="https://instagram.com/andialiyaah_?igshid=NGVhN2U2NjQ0Yg=="><i class='bx bxl-instagram'></i></a>
-                            <a href="https://www.linkedin.com/in/andi-aliyah-nur-inayah-pattoza-0b2992219/"><i class='bx bxl-linkedin'></i></a>
-                            <a href="https://github.com/Aliyah-Pattoza"><i class='bx bxl-github'></i></a>
-                            <a href="https://wa.me/+6281341394715"><i class='bx bxl-whatsapp'></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=100008836154950&mibextid=ZbWKwL" aria-label="Facebook"><i class='bx bxl-facebook'></i></a>
+                            <a href="https://instagram.com/andialiyaah_?igshid=NGVhN2U2NjQ0Yg==" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
+                            <a href="https://www.linkedin.com/in/andi-aliyah-nur-inayah-0b2992219/" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                            <a href="https://github.com/Aliyah-Pattoza" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+                            <a href="https://wa.me/+6281341394715" aria-label="WhatsApp"><i class='bx bxl-whatsapp'></i></a>
                         </div>
                     </div>
-                    
-                    <div class="col-lg-6">
-                        <div class="contact-form">
-                            <form id="contact-form">
-                                <div class="mb-3">
-                                    <input type="text" class="form-control" name="name" placeholder="Your Name" required>
-                                </div>
-                                <div class="mb-3">
-                                    <input type="email" class="form-control" name="email" placeholder="Your Email" required>
-                                </div>
-                                <div class="mb-3">
-                                    <textarea class="form-control" name="message" rows="5" placeholder="Your Message" required></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-primary-custom w-100">Send Message</button>
-                            </form>
-                        </div>
+                    <div class="contact-form reveal delay-1">
+                        <form id="contact-form">
+                            <div class="mb-3">
+                                <label class="form-label" for="contact-name">Name</label>
+                                <input type="text" class="form-control" id="contact-name" name="name" placeholder="Your name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="contact-email">Email</label>
+                                <input type="email" class="form-control" id="contact-email" name="email" placeholder="you@email.com" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="contact-message">Message</label>
+                                <textarea class="form-control" id="contact-message" name="message" rows="5" placeholder="Tell me about your idea..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary-custom w-100 magnetic">Send Message</button>
+                        </form>
                     </div>
                 </div>
             </div>
         </section>
+
+        <footer class="site-footer">
+            <div class="container">
+                <p>© <span id="yearNow"></span> Andi Aliyah Nur Inayah Pattoza</p>
+            </div>
+        </footer>
     </div>
 
     <!-- Project Detail Page -->
@@ -329,14 +506,6 @@
                                 <span class="meta-value">
                                     <a href="https://github.com/Ikannilaaa/NoReact.git" target="_blank" rel="noopener noreferrer">
                                         https://github.com/Ikannilaaa/NoReact.git
-                                    </a>
-                                </span>
-                            </div>
-                            <div class="meta-item">
-                                <span class="meta-label">Documentation:</span>
-                                <span class="meta-value">
-                                    <a href="https://youtube.com/shorts/TCgr6HdFFc4" target="_blank" rel="noopener noreferrer">
-                                        https://youtube.com/shorts/TCgr6HdFFc4
                                     </a>
                                 </span>
                             </div>
@@ -588,7 +757,308 @@
         </div>
     </div>
 
-    <div class="project-detail" id="project4">
+    <div class="project-detail" id="project10">
+        <div class="container">
+            <a href="#projects" class="back-btn" onclick="hideProjectDetail()">
+                <i class="bx bx-arrow-back"></i>
+                Back to Projects
+            </a>
+            <div class="project-detail-card">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="content-section">
+                            <h1 class="section-title">SDY NET – Internet Service Landing Page</h1>
+                            <p class="lead">
+                                SDY NET is a focused marketing website for an internet service provider. It presents package options, installation promo details, and a fast WhatsApp registration flow for homes and small businesses.
+                            </p>
+                        </div>
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <span class="meta-label">Type:</span>
+                                <span class="meta-value">Client Website</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Role:</span>
+                                <span class="meta-value">Web Developer</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Live Site:</span>
+                                <span class="meta-value">
+                                    <a href="https://sdynet.com/" target="_blank" rel="noopener noreferrer">https://sdynet.com/</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="content-section">
+                            <h3 class="section-subtitle">Project Description</h3>
+                            <p class="text-light">
+                                This project is a straightforward promotional site built to help customers understand packages quickly and contact the provider without friction. The content highlights speed options, installation fees, and a simple three-step signup path.
+                            </p>
+                        </div>
+                        <div class="content-section">
+                            <h4 class="section-subtitle">Key Features</h4>
+                            <ul class="feature-list">
+                                <li><strong>Package Showcase:</strong> Clear pricing cards for different internet plans, from basic browsing to higher-speed packages.</li>
+                                <li><strong>Installation Promo:</strong> Highlights installation and modem rental costs with a pay-after-install message.</li>
+                                <li><strong>WhatsApp CTA:</strong> Directs visitors to admin chat for coverage checks and registration.</li>
+                                <li><strong>FAQ Section:</strong> Answers common questions about signup, payment timing, and plan selection.</li>
+                            </ul>
+                        </div>
+                        <div class="content-section">
+                            <div class="tech-stack">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-detail" id="project11">
+        <div class="container">
+            <a href="#projects" class="back-btn" onclick="hideProjectDetail()">
+                <i class="bx bx-arrow-back"></i>
+                Back to Projects
+            </a>
+            <div class="project-detail-card">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="content-section">
+                            <h1 class="section-title">Klinik Pratama Farida Farma</h1>
+                            <p class="lead">
+                                A clinic website for Klinik Pratama Farida Farma in Bangkala, Jeneponto. It helps patients find services, doctor schedules, promotions, and contact details in one place.
+                            </p>
+                        </div>
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <span class="meta-label">Type:</span>
+                                <span class="meta-value">Client Website</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Role:</span>
+                                <span class="meta-value">Web Developer</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Live Site:</span>
+                                <span class="meta-value">
+                                    <a href="https://klinkpratamafaridafarma.com/" target="_blank" rel="noopener noreferrer">https://klinkpratamafaridafarma.com/</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="content-section">
+                            <h3 class="section-subtitle">Project Description</h3>
+                            <p class="text-light">
+                                The site presents general practice, dental care, and ultrasound services with a clear patient journey — from checking doctor schedules to understanding visit steps and finding the clinic location.
+                            </p>
+                        </div>
+                        <div class="content-section">
+                            <h4 class="section-subtitle">Key Features</h4>
+                            <ul class="feature-list">
+                                <li><strong>Service Catalog:</strong> Lists general clinic, dental treatments, and ultrasound services.</li>
+                                <li><strong>Doctor Schedule:</strong> Shows practice days and hours for each doctor.</li>
+                                <li><strong>Promotions:</strong> Displays active offers such as dental scaling and ultrasound discounts.</li>
+                                <li><strong>Visit Flow &amp; FAQ:</strong> Explains registration steps and answers common patient questions.</li>
+                                <li><strong>Location &amp; Contact:</strong> Provides address, operating hours, phone, and map access.</li>
+                            </ul>
+                        </div>
+                        <div class="content-section">
+                            <div class="tech-stack">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-detail" id="project12">
+        <div class="container">
+            <a href="#projects" class="back-btn" onclick="hideProjectDetail()">
+                <i class="bx bx-arrow-back"></i>
+                Back to Projects
+            </a>
+            <div class="project-detail-card">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="content-section">
+                            <h1 class="section-title">Klinik Utama Sasha</h1>
+                            <p class="lead">
+                                Klinik Utama Sasha is a wellness-focused clinic website covering nutrition, aesthetic care, general consultation, and pharmacy services in Jeneponto.
+                            </p>
+                        </div>
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <span class="meta-label">Type:</span>
+                                <span class="meta-value">Client Website</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Role:</span>
+                                <span class="meta-value">Web Developer</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Live Site:</span>
+                                <span class="meta-value">
+                                    <a href="https://klinikutamasasha.com/" target="_blank" rel="noopener noreferrer">https://klinikutamasasha.com/</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="content-section">
+                            <h3 class="section-subtitle">Project Description</h3>
+                            <p class="text-light">
+                                The website introduces the clinic’s seven clinical services and on-site pharmacy, with clear operating hours, team profiles, and a simple patient visit flow from registration to prescription pickup.
+                            </p>
+                        </div>
+                        <div class="content-section">
+                            <h4 class="section-subtitle">Key Features</h4>
+                            <ul class="feature-list">
+                                <li><strong>Multi-Service Overview:</strong> Nutrition, general consultation, aesthetic care, vaccination, circumcision, ultrasound, and lab testing.</li>
+                                <li><strong>Pharmacy Section:</strong> Information about Apotek Sasha, including hours and product categories.</li>
+                                <li><strong>Team Profiles:</strong> Highlights clinic leadership and supporting fields.</li>
+                                <li><strong>Visit Guidance:</strong> Explains how patients can come, get examined, and redeem prescriptions on-site.</li>
+                                <li><strong>Vision &amp; Mission:</strong> Communicates the clinic’s wellness direction and service values.</li>
+                            </ul>
+                        </div>
+                        <div class="content-section">
+                            <div class="tech-stack">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-detail" id="project13">
+        <div class="container">
+            <a href="#projects" class="back-btn" onclick="hideProjectDetail()">
+                <i class="bx bx-arrow-back"></i>
+                Back to Projects
+            </a>
+            <div class="project-detail-card">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="content-section">
+                            <h1 class="section-title">RSUD Rumbia</h1>
+                            <p class="lead">
+                                An official hospital website for RSUD Rumbia, designed to help the public access emergency information, outpatient schedules, bed availability, and hospital services.
+                            </p>
+                        </div>
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <span class="meta-label">Type:</span>
+                                <span class="meta-value">Client Website</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Role:</span>
+                                <span class="meta-value">Web Developer</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Live Site:</span>
+                                <span class="meta-value">
+                                    <a href="https://rsudrumbia.com/" target="_blank" rel="noopener noreferrer">https://rsudrumbia.com/</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="content-section">
+                            <h3 class="section-subtitle">Project Description</h3>
+                            <p class="text-light">
+                                The site supports a Type D public hospital in Jeneponto with practical patient-facing information: 24-hour ER access, polyclinic schedules, inpatient facilities, and contact details. It also communicates accreditation status and BPJS partnership.
+                            </p>
+                        </div>
+                        <div class="content-section">
+                            <h4 class="section-subtitle">Key Features</h4>
+                            <ul class="feature-list">
+                                <li><strong>Emergency Access:</strong> Clear entry points for 24-hour IGD information and hospital contact channels.</li>
+                                <li><strong>Doctor Schedule:</strong> Displays doctors on duty with clinic hours.</li>
+                                <li><strong>Service Directory:</strong> Covers outpatient clinics, inpatient care, maternity services, laboratory, and pharmacy.</li>
+                                <li><strong>Bed Information:</strong> Publishes room/class capacity for public reference.</li>
+                                <li><strong>News &amp; Updates:</strong> Space for announcements and hospital activities.</li>
+                            </ul>
+                        </div>
+                        <div class="content-section">
+                            <div class="tech-stack">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">PHP</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-detail" id="project14">
+        <div class="container">
+            <a href="#projects" class="back-btn" onclick="hideProjectDetail()">
+                <i class="bx bx-arrow-back"></i>
+                Back to Projects
+            </a>
+            <div class="project-detail-card">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="content-section">
+                            <h1 class="section-title">Koperasi Lanto – Digital Cooperative Platform</h1>
+                            <p class="lead">
+                                A digital cooperative platform for staff of RSUD Lanto Dg Pasewang. Members can monitor savings, apply for loans online, and check estimated SHU distribution from one place.
+                            </p>
+                        </div>
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <span class="meta-label">Type:</span>
+                                <span class="meta-value">Client Platform</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Role:</span>
+                                <span class="meta-value">Web Developer</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Live Site:</span>
+                                <span class="meta-value">
+                                    <a href="https://koperasilanto.com/" target="_blank" rel="noopener noreferrer">https://koperasilanto.com/</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="content-section">
+                            <h3 class="section-subtitle">Project Description</h3>
+                            <p class="text-light">
+                                Compared with a simple brochure site, this project focuses on member services. It presents cooperative products and enables digital workflows such as loan simulation, online applications, and SHU tracking for active members.
+                            </p>
+                        </div>
+                        <div class="content-section">
+                            <h4 class="section-subtitle">Key Features</h4>
+                            <ul class="feature-list">
+                                <li><strong>Member Overview:</strong> Highlights active members, total savings, and ongoing loans.</li>
+                                <li><strong>Savings Products:</strong> Explains principal and mandatory monthly savings.</li>
+                                <li><strong>Loan Services:</strong> Supports regular, emergency, and multipurpose loans with online simulation.</li>
+                                <li><strong>Online Application:</strong> Lets members submit loan requests and documents digitally.</li>
+                                <li><strong>SHU Tracking:</strong> Helps members view estimated surplus distribution based on transactions.</li>
+                            </ul>
+                        </div>
+                        <div class="content-section">
+                            <div class="tech-stack">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">PHP</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-detail" id="project9">
         <div class="container">
             <a href="#projects" class="back-btn" onclick="hideProjectDetail()">
                 <i class="bx bx-arrow-back"></i>
@@ -600,9 +1070,9 @@
                     <div class="col-12">
                         <!-- Project Header -->
                         <div class="content-section">
-                            <h1 class="section-title">SOS - Multiplayer Game</h1>
+                            <h1 class="section-title">Secure Verification App – Mobile Transaction Approval System</h1>
                             <p class="lead">
-                                SOS Game is a two-player network-based digital board game built with Python and socket programming, allowing players to play in real-time in one room with a scoring system based on the formation of the word “S-O-S”.
+                                Secure Verification App is a mobile application that helps organizations approve transactions more securely. Registered users can sign in, review pending requests, and approve or reject them with face recognition as an extra identity check. Built with Flutter (Dart), the app integrates APIs to fetch transaction requests and process approval or rejection actions.
                             </p>
                         </div>
                         
@@ -614,19 +1084,11 @@
                             </div>
                             <div class="meta-item">
                                 <span class="meta-label">Role:</span>
-                                <span class="meta-value">Fullstack Developer</span>
+                                <span class="meta-value">Mobile Developer Intern</span>
                             </div>
                             <div class="meta-item">
-                                <span class="meta-label">Course:</span>
-                                <span class="meta-value">Network Programming</span>
-                            </div>
-                            <div class="meta-item">
-                                <span class="meta-label">Repository:</span>
-                                <span class="meta-value">
-                                    <a href="https://github.com/farrasblah/sos_game" target="_blank" rel="noopener noreferrer">
-                                        https://github.com/farrasblah/sos_game
-                                    </a>
-                                </span>
+                                <span class="meta-label">Company:</span>
+                                <span class="meta-value">UBS Gold</span>
                             </div>
                         </div>
                         
@@ -634,31 +1096,51 @@
                         <div class="content-section">
                             <h3 class="section-subtitle">Project Description</h3>
                             <p class="text-light">
-                                SOS Game is a networked digital board game designed to enable two players to compete in real time over the internet within a shared game room. The game's construction utilized Python with Pygame for the graphical user interface, enabling players to engage in a strategic sequence of actions. In this sequence, players alternately place the letter "S" or "O" on a grid of selectable sizes (3x3, 5x5, or 9x9). The objective of the game is to form the sequence "S-O-S" in any of the following orientations: horizontally, vertically, or diagonally. The player who achieves this formation first earns points. The game concludes when the board is full, and the winner is determined by the highest score—or a draw if scores are tied.
-
-                                The game employs a client-server architecture with a manually implemented HTTP-like protocol utilizing Python socket programming. The server concurrently manages multiple connections via threading, overseeing all active game states (player list, turn order, board status, and scores) in memory based on a unique room_id.
+                                The app was designed to make reviewing and authorizing transaction requests simpler and more secure on mobile. Face recognition is used at multiple points in the flow, so users confirm their identity before opening the app and before completing sensitive approval or rejection actions.
                             </p>
                         </div>
+                        
+                        <!-- Features Section -->
+                        <div class="content-section">
+                            <h4 class="section-subtitle">Key Features</h4>
+                            <ul class="feature-list">
+                                <li>
+                                    <strong>User Authentication:</strong> Registered users log in with their existing accounts, then complete face recognition to confirm their identity.
+                                </li>
+                                <li>
+                                    <strong>Transaction Requests:</strong> Shows pending transaction requests with key details so users can review each one before deciding.
+                                </li>
+                                <li>
+                                    <strong>Transaction Approval &amp; Rejection:</strong> Lets users approve or reject requests directly from the mobile app.
+                                </li>
+                                <li>
+                                    <strong>Face Recognition Verification:</strong> Requires face verification before confirming an approval or rejection, adding another layer of protection for sensitive actions.
+                                </li>
+                                <li>
+                                    <strong>API Integration:</strong> Connects to dummy APIs to retrieve transaction data and process user decisions throughout the approval workflow.
+                                </li>
+                            </ul>
+                        </div>
 
-                        <div class="project-video">
-                            <div class="video-container">
-                                <iframe src="https://www.youtube.com/embed/jrbR70YjOdI" 
-                                        title="SOS Game Demo" 
-                                        frameborder="0" 
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                        allowfullscreen>
-                                </iframe>
+                        <!-- App Demo Documentation -->
+                        <div class="content-section">
+                            <h3 class="section-subtitle mb-1">App Demo</h3>
+                            <p class="docs-subtitle mb-3">A short walkthrough of the Secure Verification App flow, including authentication and transaction approval.</p>
+                            <div class="project-video demo-video">
+                                <video controls playsinline preload="metadata" class="video-fluid" poster="">
+                                    <source src="video/Secure-Verification-App.mp4" type="video/mp4">
+                                    Your browser does not support video playback.
+                                </video>
                             </div>
                         </div>
-                    
+                        
                         <!-- Technology Stack -->
                         <div class="content-section">
                             <div class="tech-stack">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">PyGame</span>
-                                <span class="tech-tag">Socket Programming</span>
-                                <span class="tech-tag">Threading</span>
-                                <span class="tech-tag">Client-Server Architecture</span>
+                                <span class="tech-tag">Flutter</span>
+                                <span class="tech-tag">Dart</span>
+                                <span class="tech-tag">REST API</span>
+                                <span class="tech-tag">Face Recognition</span>
                             </div>
                         </div>
                     </div>
@@ -667,7 +1149,7 @@
         </div>
     </div>
 
-    <div class="project-detail" id="project5">
+    <div class="project-detail" id="project8">
         <div class="container">
             <a href="#projects" class="back-btn" onclick="hideProjectDetail()">
                 <i class="bx bx-arrow-back"></i>
@@ -679,9 +1161,9 @@
                     <div class="col-12">
                         <!-- Project Header -->
                         <div class="content-section">
-                            <h1 class="section-title">Pawfee – Cafe Website</h1>
+                            <h1 class="section-title">RAST – Judging Student Submission Tool</h1>
                             <p class="lead">
-                                Created a cafe web application called Pawfee, developed using Golang, which enables users to place food and drink orders, make table reservations, and manage their interactions with the cafe entirely online. The project was developed for the Framework-based Programming course and focuses on simulating a modern digital ordering system with real-time features and admin control panels.
+                                RAST is a web application that helps lecturers review student essay submissions through automated text analysis. It combines NLP and Transformer models to assess answers from several angles — AI-generated content detection, semantic relevance, peer similarity, and writing style. Built with React and FastAPI, the system presents clear analytical insights that support more informed academic review.
                             </p>
                         </div>
                         
@@ -689,21 +1171,29 @@
                         <div class="project-meta">
                             <div class="meta-item">
                                 <span class="meta-label">Year:</span>
-                                <span class="meta-value">2024</span>
+                                <span class="meta-value">2026</span>
                             </div>
                             <div class="meta-item">
                                 <span class="meta-label">Role:</span>
-                                <span class="meta-value">Full-stack Web Developer</span>
+                                <span class="meta-value">Full-Stack Developer &amp; Machine Learning Engineer</span>
                             </div>
                             <div class="meta-item">
-                                <span class="meta-label">Course:</span>
-                                <span class="meta-value">Framework-based Programming</span>
+                                <span class="meta-label">Project:</span>
+                                <span class="meta-value">Undergraduate Thesis (Final Year Project)</span>
                             </div>
                             <div class="meta-item">
                                 <span class="meta-label">Repository:</span>
                                 <span class="meta-value">
-                                    <a href="https://github.com/Aliyah-Pattoza/PBKK-FP-GO.git" target="_blank" rel="noopener noreferrer">
-                                        https://github.com/Aliyah-Pattoza/PBKK-FP-GO.git
+                                    <a href="https://github.com/Aliyah-Pattoza/Tugas-Akhir.git" target="_blank" rel="noopener noreferrer">
+                                        https://github.com/Aliyah-Pattoza/Tugas-Akhir.git
+                                    </a>
+                                </span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Demo:</span>
+                                <span class="meta-value">
+                                    <a href="https://drive.google.com/file/d/109xKfObFM2wf_7rzOIYqMB9QN0_eyyts/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+                                        Video Demo (Google Drive)
                                     </a>
                                 </span>
                             </div>
@@ -713,45 +1203,427 @@
                         <div class="content-section">
                             <h3 class="section-subtitle">Project Description</h3>
                             <p class="text-light">
-                                Pawfee is a web application that is based on the Go programming language. It allows cafe customers to access a menu that is organized into categories, place orders for food and beverages, and reserve tables—all from their browsers. The system implements a clear separation between customer and administrative roles. It is possible for customers to engage with a dynamic menu, view the contents of their cart, and ascertain their reservation status. Administrators are able to manage orders, menu items, and reservations through a secure backend.
+                                RAST was built to help lecturers run an initial review of essay submissions more efficiently. By combining several text analysis methods, it highlights answers that may need closer attention.
+                            </p>
+                            <p class="text-light">
+                                It does not decide whether academic integrity has been violated. Instead, RAST acts as a decision-support tool — presenting clear indicators that lecturers can review and interpret themselves.
                             </p>
                         </div>
-
+                        
                         <!-- Features Section -->
                         <div class="content-section">
                             <h4 class="section-subtitle">Key Features</h4>
                             <ul class="feature-list">
                                 <li>
-                                    <strong>Secure Authentication:</strong> Role-based login system for customers and admins, with session handling.
+                                    <strong>AI-Generated Content Detection:</strong> Uses a fine-tuned DeBERTa model to estimate how likely a response is AI-generated.
                                 </li>
                                 <li>
-                                    <strong>Dynamic Menu Interaction:</strong> Customers can increment or decrement item quantities, with real-time cart updates and availability checks.
+                                    <strong>Semantic Relevance Analysis:</strong> Uses Sentence-BERT (all-mpnet-base-v2) to measure how closely a student answer aligns with the expected meaning of the question.
                                 </li>
                                 <li>
-                                    <strong>Self-Ordering System:</strong> Seamless digital ordering workflow with item selection, cart preview, and order confirmation.
+                                    <strong>Peer Answer Similarity Analysis:</strong> Compares submissions across students to surface unusually similar answers that may need follow-up review.
                                 </li>
                                 <li>
-                                    <strong>Table Reservation:</strong> Simple reservation form with customer phone input and reservation status tracking.
+                                    <strong>Stylometric Analysis:</strong> Looks at writing patterns and linguistic traits to provide additional signals during evaluation.
                                 </li>
                                 <li>
-                                    <strong>Admin Panel:</strong> Tools to view/edit menu items, manage order statuses, confirm/cancel reservations, and view user activity.
+                                    <strong>Evaluation Dashboard:</strong> Shows results in an interactive dashboard so lecturers can inspect scores, open individual answers, and prioritize what to review next.
+                                </li>
+                                <li>
+                                    <strong>Report Generation:</strong> Exports evaluation reports in PDF and Excel for documentation and further assessment.
                                 </li>
                             </ul>
                         </div>
 
-                        <div class="project-image">
-                            <div class="noreact-img">
-                                <img src="img/Pawfee.png" alt="Pawfee Web Screenshot" class="img-fluid">
+                        <!-- Website Documentation Gallery -->
+                        <div class="content-section project-docs">
+                            <div class="docs-header">
+                                <div>
+                                    <h3 class="section-subtitle mb-1">Website Documentation</h3>
+                                    <p class="docs-subtitle">Key screens from the RAST platform — click any image to view it larger</p>
+                                </div>
+                                <div class="docs-filters" role="tablist" aria-label="Filter RAST documentation">
+                                    <button type="button" class="docs-filter active" data-filter="all" role="tab" aria-selected="true">All</button>
+                                    <button type="button" class="docs-filter" data-filter="auth" role="tab" aria-selected="false">Auth</button>
+                                    <button type="button" class="docs-filter" data-filter="dashboard" role="tab" aria-selected="false">Dashboard</button>
+                                    <button type="button" class="docs-filter" data-filter="assessment" role="tab" aria-selected="false">Assessment</button>
+                                    <button type="button" class="docs-filter" data-filter="analysis" role="tab" aria-selected="false">Analysis</button>
+                                </div>
+                            </div>
+
+                            <div class="docs-gallery">
+                                <article class="docs-card docs-card--featured" data-category="dashboard" data-index="0">
+                                    <button type="button" class="docs-card-btn" data-lightbox-index="0" aria-label="Open RAST Dashboard">
+                                        <div class="docs-card-media">
+                                            <img src="img/rast/01-dashboard.png" alt="RAST Dashboard" loading="lazy">
+                                            <div class="docs-card-overlay">
+                                                <span class="docs-zoom"><i class='bx bx-zoom-in'></i> View</span>
+                                            </div>
+                                            <span class="docs-badge">Dashboard</span>
+                                        </div>
+                                        <div class="docs-card-body">
+                                            <h4>Dashboard</h4>
+                                            <p>Overview of assessments, students, review flags, and the four NLP analysis modules.</p>
+                                        </div>
+                                    </button>
+                                </article>
+
+                                <article class="docs-card" data-category="auth" data-index="1">
+                                    <button type="button" class="docs-card-btn" data-lightbox-index="1" aria-label="Open lecturer registration page">
+                                        <div class="docs-card-media">
+                                            <img src="img/rast/02-register.png" alt="RAST lecturer registration page" loading="lazy">
+                                            <div class="docs-card-overlay">
+                                                <span class="docs-zoom"><i class='bx bx-zoom-in'></i> View</span>
+                                            </div>
+                                            <span class="docs-badge">Auth</span>
+                                        </div>
+                                        <div class="docs-card-body">
+                                            <h4>Lecturer Registration</h4>
+                                            <p>Account registration portal for lecturers to manage assessments and analysis results.</p>
+                                        </div>
+                                    </button>
+                                </article>
+
+                                <article class="docs-card" data-category="assessment" data-index="2">
+                                    <button type="button" class="docs-card-btn" data-lightbox-index="2" aria-label="Open assessment history">
+                                        <div class="docs-card-media">
+                                            <img src="img/rast/03-assessment-list.png" alt="Assessment history and list" loading="lazy">
+                                            <div class="docs-card-overlay">
+                                                <span class="docs-zoom"><i class='bx bx-zoom-in'></i> View</span>
+                                            </div>
+                                            <span class="docs-badge">Assessment</span>
+                                        </div>
+                                        <div class="docs-card-body">
+                                            <h4>Assessment History</h4>
+                                            <p>Browse assessments with status filters, student counts, and review indicators.</p>
+                                        </div>
+                                    </button>
+                                </article>
+
+                                <article class="docs-card" data-category="assessment" data-index="3">
+                                    <button type="button" class="docs-card-btn" data-lightbox-index="3" aria-label="Open assessment detail">
+                                        <div class="docs-card-media">
+                                            <img src="img/rast/04-assessment-detail.png" alt="RAST assessment detail" loading="lazy">
+                                            <div class="docs-card-overlay">
+                                                <span class="docs-zoom"><i class='bx bx-zoom-in'></i> View</span>
+                                            </div>
+                                            <span class="docs-badge">Assessment</span>
+                                        </div>
+                                        <div class="docs-card-body">
+                                            <h4>Assessment Detail</h4>
+                                            <p>Submission summary, average scores, review alerts, and PDF/Excel report downloads.</p>
+                                        </div>
+                                    </button>
+                                </article>
+
+                                <article class="docs-card" data-category="assessment" data-index="4">
+                                    <button type="button" class="docs-card-btn" data-lightbox-index="4" aria-label="Open visual analytics">
+                                        <div class="docs-card-media">
+                                            <img src="img/rast/05-visual-analytics.png" alt="Visual analytics score distribution" loading="lazy">
+                                            <div class="docs-card-overlay">
+                                                <span class="docs-zoom"><i class='bx bx-zoom-in'></i> View</span>
+                                            </div>
+                                            <span class="docs-badge">Assessment</span>
+                                        </div>
+                                        <div class="docs-card-body">
+                                            <h4>Visual Analytics</h4>
+                                            <p>Student score distribution and average profiles across the four analysis modules.</p>
+                                        </div>
+                                    </button>
+                                </article>
+
+                                <article class="docs-card" data-category="analysis" data-index="5">
+                                    <button type="button" class="docs-card-btn" data-lightbox-index="5" aria-label="Open student detail analysis">
+                                        <div class="docs-card-media">
+                                            <img src="img/rast/06-student-detail.png" alt="Student detail analysis" loading="lazy">
+                                            <div class="docs-card-overlay">
+                                                <span class="docs-zoom"><i class='bx bx-zoom-in'></i> View</span>
+                                            </div>
+                                            <span class="docs-badge">Analysis</span>
+                                        </div>
+                                        <div class="docs-card-body">
+                                            <h4>Student Detail</h4>
+                                            <p>Per-question breakdown of authenticity, relevance, originality, and writing style scores.</p>
+                                        </div>
+                                    </button>
+                                </article>
+
+                                <article class="docs-card" data-category="analysis" data-index="6">
+                                    <button type="button" class="docs-card-btn" data-lightbox-index="6" aria-label="Open peer similarity analysis">
+                                        <div class="docs-card-media">
+                                            <img src="img/rast/07-peer-similarity.png" alt="Peer similarity analysis" loading="lazy">
+                                            <div class="docs-card-overlay">
+                                                <span class="docs-zoom"><i class='bx bx-zoom-in'></i> View</span>
+                                            </div>
+                                            <span class="docs-badge">Analysis</span>
+                                        </div>
+                                        <div class="docs-card-body">
+                                            <h4>Peer Similarity</h4>
+                                            <p>Side-by-side answer comparison with semantic, TF-IDF, and Jaccard similarity scores.</p>
+                                        </div>
+                                    </button>
+                                </article>
+
+                                <article class="docs-card" data-category="analysis" data-index="7">
+                                    <button type="button" class="docs-card-btn" data-lightbox-index="7" aria-label="Open analysis module documentation">
+                                        <div class="docs-card-media">
+                                            <img src="img/rast/08-analysis-module.png" alt="Analysis module and scoring explanation" loading="lazy">
+                                            <div class="docs-card-overlay">
+                                                <span class="docs-zoom"><i class='bx bx-zoom-in'></i> View</span>
+                                            </div>
+                                            <span class="docs-badge">Analysis</span>
+                                        </div>
+                                        <div class="docs-card-body">
+                                            <h4>Analysis Modules</h4>
+                                            <p>Explanation of result labels and how the final score is calculated from four modules.</p>
+                                        </div>
+                                    </button>
+                                </article>
                             </div>
                         </div>
-                    
+
                         <!-- Technology Stack -->
                         <div class="content-section">
                             <div class="tech-stack">
-                                <span class="tech-tag">GO</span>
-                                <span class="tech-tag">Gin</span>
-                                <span class="tech-tag">Gorm</span>
-                                <span class="tech-tag">MYSQL</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">FastAPI</span>
+                                <span class="tech-tag">Hugging Face Transformers</span>
+                                <span class="tech-tag">DeBERTa</span>
+                                <span class="tech-tag">Sentence-BERT</span>
+                                <span class="tech-tag">all-mpnet-base-v2</span>
+                                <span class="tech-tag">Scikit-learn</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-detail" id="project7">
+        <div class="container">
+            <a href="#projects" class="back-btn" onclick="hideProjectDetail()">
+                <i class="bx bx-arrow-back"></i>
+                Back to Projects
+            </a>
+            
+            <div class="project-detail-card">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- Project Header -->
+                        <div class="content-section">
+                            <h1 class="section-title">Inkluvia – Accessible Learning Platform</h1>
+                            <p class="lead">
+                                Inkluvia is a web platform that helps visually impaired teachers access and manage digital learning materials. It converts PDF documents into accessible formats through AI-powered processing, screen reader support, and Braille device integration. Built with Laravel and AI services from Gemini and OpenAI, it also uses MQTT to deliver content to EduBraille devices.
+                            </p>
+                        </div>
+                        
+                        <!-- Project Metadata -->
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <span class="meta-label">Year:</span>
+                                <span class="meta-value">2025</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Role:</span>
+                                <span class="meta-value">Backend Developer</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Project:</span>
+                                <span class="meta-value">GEMASTIK – Tomodotchi Team</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Repository:</span>
+                                <span class="meta-value">
+                                    <a href="https://github.com/Aliyah-Pattoza/Inkluvia.git" target="_blank" rel="noopener noreferrer">
+                                        https://github.com/Aliyah-Pattoza/Inkluvia.git
+                                    </a>
+                                </span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Demo:</span>
+                                <span class="meta-value">
+                                    <a href="https://youtu.be/FD9i2g_hJU8?si=10D_LnsmbN2uQgz6" target="_blank" rel="noopener noreferrer">
+                                        YouTube Demo
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <!-- Project Description -->
+                        <div class="content-section">
+                            <h3 class="section-subtitle">Project Description</h3>
+                            <p class="text-light">
+                                Inkluvia makes it easier for visually impaired teachers to prepare teaching resources independently. By combining document processing, AI, and assistive technology, it turns conventional digital files into formats that work better with screen readers and Braille devices.
+                            </p>
+                        </div>
+                        
+                        <!-- Features Section -->
+                        <div class="content-section">
+                            <h4 class="section-subtitle">Key Features</h4>
+                            <ul class="feature-list">
+                                <li>
+                                    <strong>PDF Document Processing:</strong> Teachers can upload PDF materials, which are processed with PyMuPDF to extract content for further conversion.
+                                </li>
+                                <li>
+                                    <strong>AI-Powered Content Processing:</strong> Gemini analyzes the extracted content, while OpenAI helps refine the output into a clearer, more accessible structure.
+                                </li>
+                                <li>
+                                    <strong>Screen Reader Compatibility:</strong> Converts mathematical and special symbols into representations that are easier to understand through assistive reading tools.
+                                </li>
+                                <li>
+                                    <strong>Braille Integration:</strong> Uses MQTT to send processed materials to EduBraille devices for refreshable Braille access.
+                                </li>
+                                <li>
+                                    <strong>Accessible User Interface:</strong> Designed for both visually impaired and sighted teachers, with keyboard navigation and screen reader support in mind.
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Website Documentation Gallery -->
+                        <div class="content-section project-docs">
+                            <div class="docs-header">
+                                <div>
+                                    <h3 class="section-subtitle mb-1">Website Documentation</h3>
+                                    <p class="docs-subtitle">Key screens from the Inkluvia platform — click any image to view it larger</p>
+                                </div>
+                                <div class="docs-filters" role="tablist" aria-label="Filter Inkluvia documentation">
+                                    <button type="button" class="docs-filter active" data-filter="all" role="tab" aria-selected="true">All</button>
+                                    <button type="button" class="docs-filter" data-filter="landing" role="tab" aria-selected="false">Landing</button>
+                                    <button type="button" class="docs-filter" data-filter="admin" role="tab" aria-selected="false">Admin</button>
+                                    <button type="button" class="docs-filter" data-filter="user" role="tab" aria-selected="false">User</button>
+                                </div>
+                            </div>
+
+                            <div class="docs-gallery">
+                                <article class="docs-card docs-card--featured" data-category="landing" data-index="0">
+                                    <button type="button" class="docs-card-btn" data-lightbox-index="0" aria-label="Open landing page">
+                                        <div class="docs-card-media">
+                                            <img src="img/inkluvia/01-landing.png" alt="Inkluvia landing page" loading="lazy">
+                                            <div class="docs-card-overlay">
+                                                <span class="docs-zoom"><i class='bx bx-zoom-in'></i> View</span>
+                                            </div>
+                                            <span class="docs-badge">Landing</span>
+                                        </div>
+                                        <div class="docs-card-body">
+                                            <h4>Landing Page</h4>
+                                            <p>Homepage for an inclusive education platform built around web access and digital Braille.</p>
+                                        </div>
+                                    </button>
+                                </article>
+
+                                <article class="docs-card" data-category="admin" data-index="1">
+                                    <button type="button" class="docs-card-btn" data-lightbox-index="1" aria-label="Open admin dashboard">
+                                        <div class="docs-card-media">
+                                            <img src="img/inkluvia/02-admin-dashboard.png" alt="Inkluvia admin dashboard" loading="lazy">
+                                            <div class="docs-card-overlay">
+                                                <span class="docs-zoom"><i class='bx bx-zoom-in'></i> View</span>
+                                            </div>
+                                            <span class="docs-badge">Admin</span>
+                                        </div>
+                                        <div class="docs-card-body">
+                                            <h4>Admin Dashboard</h4>
+                                            <p>Summary of users, institutions, devices, and learning materials across the platform.</p>
+                                        </div>
+                                    </button>
+                                </article>
+
+                                <article class="docs-card" data-category="admin" data-index="2">
+                                    <button type="button" class="docs-card-btn" data-lightbox-index="2" aria-label="Open device management">
+                                        <div class="docs-card-media">
+                                            <img src="img/inkluvia/03-device-management.png" alt="EduBraille device management" loading="lazy">
+                                            <div class="docs-card-overlay">
+                                                <span class="docs-zoom"><i class='bx bx-zoom-in'></i> View</span>
+                                            </div>
+                                            <span class="docs-badge">Admin</span>
+                                        </div>
+                                        <div class="docs-card-body">
+                                            <h4>Device Management</h4>
+                                            <p>Manage EduBraille devices, MQTT connection status, and institution assignments.</p>
+                                        </div>
+                                    </button>
+                                </article>
+
+                                <article class="docs-card" data-category="admin" data-index="3">
+                                    <button type="button" class="docs-card-btn" data-lightbox-index="3" aria-label="Open Braille preview">
+                                        <div class="docs-card-media">
+                                            <img src="img/inkluvia/07-braille-preview.png" alt="Braille JSON preview" loading="lazy">
+                                            <div class="docs-card-overlay">
+                                                <span class="docs-zoom"><i class='bx bx-zoom-in'></i> View</span>
+                                            </div>
+                                            <span class="docs-badge">Admin</span>
+                                        </div>
+                                        <div class="docs-card-body">
+                                            <h4>Braille Preview</h4>
+                                            <p>Converted learning materials in Braille JSON, ready to send to connected devices.</p>
+                                        </div>
+                                    </button>
+                                </article>
+
+                                <article class="docs-card" data-category="user" data-index="4">
+                                    <button type="button" class="docs-card-btn" data-lightbox-index="4" aria-label="Open learning session schedule">
+                                        <div class="docs-card-media">
+                                            <img src="img/inkluvia/04-schedule.png" alt="Learning session schedule" loading="lazy">
+                                            <div class="docs-card-overlay">
+                                                <span class="docs-zoom"><i class='bx bx-zoom-in'></i> View</span>
+                                            </div>
+                                            <span class="docs-badge">User</span>
+                                        </div>
+                                        <div class="docs-card-body">
+                                            <h4>Learning Schedule</h4>
+                                            <p>Manage learning sessions with date and status filters for day-to-day teaching plans.</p>
+                                        </div>
+                                    </button>
+                                </article>
+
+                                <article class="docs-card" data-category="user" data-index="5">
+                                    <button type="button" class="docs-card-btn" data-lightbox-index="5" aria-label="Open create schedule form">
+                                        <div class="docs-card-media">
+                                            <img src="img/inkluvia/05-create-schedule.png" alt="Create new schedule form" loading="lazy">
+                                            <div class="docs-card-overlay">
+                                                <span class="docs-zoom"><i class='bx bx-zoom-in'></i> View</span>
+                                            </div>
+                                            <span class="docs-badge">User</span>
+                                        </div>
+                                        <div class="docs-card-body">
+                                            <h4>Create Schedule</h4>
+                                            <p>Multi-step form for setting date, time, learning materials, and recurrence.</p>
+                                        </div>
+                                    </button>
+                                </article>
+
+                                <article class="docs-card" data-category="user" data-index="6">
+                                    <button type="button" class="docs-card-btn" data-lightbox-index="6" aria-label="Open Braille material library">
+                                        <div class="docs-card-media">
+                                            <img src="img/inkluvia/06-library.png" alt="Braille material library" loading="lazy">
+                                            <div class="docs-card-overlay">
+                                                <span class="docs-zoom"><i class='bx bx-zoom-in'></i> View</span>
+                                            </div>
+                                            <span class="docs-badge">User</span>
+                                        </div>
+                                        <div class="docs-card-body">
+                                            <h4>Material Library</h4>
+                                            <p>Browse Braille learning materials with search and category filters.</p>
+                                        </div>
+                                    </button>
+                                </article>
+                            </div>
+                        </div>
+                        
+                        <!-- Technology Stack -->
+                        <div class="content-section">
+                            <div class="tech-stack">
+                                <span class="tech-tag">Laravel</span>
+                                <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">PyMuPDF</span>
+                                <span class="tech-tag">Gemini API</span>
+                                <span class="tech-tag">OpenAI API</span>
+                                <span class="tech-tag">MQTT</span>
+                                <span class="tech-tag">EMQX</span>
                             </div>
                         </div>
                     </div>
@@ -809,18 +1681,15 @@
                                 The PETET game is a two-dimensional educational adventure game developed using Java for the Object Oriented Programming course. The game in question simulates a kindergartner's journey to school by collecting various school supplies scattered along the way. Each item contributes to the player's score. The objective of the game is to navigate a grid-based map while evading obstacles such as mud and water puddles, which result in a points deduction when stepped on. The objective of the game is to reach the school building, which serves as the culmination of the game and displays the total score based on the items collected. The game places emphasis on object-oriented principles, including inheritance, encapsulation, and polymorphism, in the management of game entities such as items, obstacles, characters, and scoring logic.
                             </p>
                         </div>
-
+                        
                         <div class="project-video">
-                            <div class="video-container">
-                                <iframe src="https://www.youtube.com/embed/QfgQDPRGCX8" 
-                                        title="PETET Demo" 
-                                        frameborder="0" 
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                        allowfullscreen>
-                                </iframe>
-                            </div>
+                            <video controls class="video-fluid">
+                                <source src="video/PETET.mp4" type="video/mp4">
+                                Your browser does not support video playback.
+                            </video>
                         </div>
-                    
+
+                        
                         <!-- Technology Stack -->
                         <div class="content-section">
                             <div class="tech-stack">
@@ -833,6 +1702,27 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- Inkluvia Docs Lightbox -->
+    <div class="docs-lightbox" id="docsLightbox" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-label="Pratinjau dokumentasi">
+        <div class="docs-lightbox-backdrop" data-lightbox-close></div>
+        <div class="docs-lightbox-dialog">
+            <button type="button" class="docs-lightbox-close" data-lightbox-close aria-label="Tutup pratinjau">
+                <i class='bx bx-x'></i>
+            </button>
+            <button type="button" class="docs-lightbox-nav docs-lightbox-prev" id="docsLightboxPrev" aria-label="Gambar sebelumnya">
+                <i class='bx bx-chevron-left'></i>
+            </button>
+            <figure class="docs-lightbox-figure">
+                <img src="" alt="" id="docsLightboxImage">
+                <figcaption id="docsLightboxCaption"></figcaption>
+            </figure>
+            <button type="button" class="docs-lightbox-nav docs-lightbox-next" id="docsLightboxNext" aria-label="Gambar berikutnya">
+                <i class='bx bx-chevron-right'></i>
+            </button>
+            <div class="docs-lightbox-counter" id="docsLightboxCounter"></div>
         </div>
     </div>
 

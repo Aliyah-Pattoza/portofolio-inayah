@@ -1,0 +1,482 @@
+/* Import External Stylesheets */
+@import url('https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css');
+@import url('https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css');
+
+/* CSS Custom Properties */
+:root {
+    --primary-color: #00d4ff;
+    --secondary-color: #0084ff;
+    --dark-bg: #0c0c0c;
+    --dark-secondary: #1a1a2e;
+    --text-light: #b0b0b0;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, var(--dark-bg) 0%, var(--dark-secondary) 50%, #16213e 100%);
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===================
+   NAVIGATION STYLES
+   =================== */
+.navbar {
+    background: rgba(12, 12, 12, 0.95) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 123, 255, 0.2);
+}
+
+.navbar-brand {
+    color: var(--primary-color) !important;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff !important;
+    font-weight: 500;
+    margin: 0 10px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+    width: 100%;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+/* ===================
+   HERO SECTION
+   =================== */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, var(--dark-bg) 0%, var(--dark-secondary) 50%, #16213e 100%);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero h3 {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+}
+
+.hero .highlight {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Social Links */
+.social-links a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-right: 15px;
+}
+
+.social-links a:hover {
+    background: var(--primary-color);
+    color: var(--dark-bg);
+    box-shadow: 0 0 20px var(--primary-color);
+    transform: translateY(-3px);
+}
+
+/* Custom Button */
+.btn-primary-custom {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border: none;
+    border-radius: 30px;
+    padding: 12px 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.4);
+}
+
+/* ===================
+   ABOUT SECTION
+   =================== */
+.about-section {
+    background: linear-gradient(135deg, var(--dark-secondary) 0%, #16213e 100%);
+    padding: 100px 0;
+}
+
+.about-img img {
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 212, 255, 0.2);
+    transition: transform 0.3s ease;
+    max-width: 300px;
+}
+
+.about-img:hover img {
+    transform: scale(1.05);
+}
+
+/* ===================
+   GENERAL SECTION STYLES
+   =================== */
+.section-title {
+    font-size: 3rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 2rem;
+}
+
+.section-subtitle {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* ===================
+   PROJECTS SECTION
+   =================== */
+.projects-section {
+    background: linear-gradient(135deg, var(--dark-bg) 0%, var(--dark-secondary) 100%);
+    padding: 100px 0;
+}
+
+.project-card {
+    background: rgba(26, 26, 46, 0.8);
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    border-radius: 15px;
+    padding: 30px;
+    height: 100%;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.project-card:hover::before {
+    left: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 212, 255, 0.3);
+    border-color: var(--primary-color);
+}
+
+.project-title {
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.semester-badge {
+    background: rgba(0, 132, 255, 0.2);
+    color: var(--secondary-color);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 20px 0;
+}
+
+.tech-tag {
+    background: rgba(0, 212, 255, 0.2);
+    color: var(--primary-color);
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    border: 1px solid rgba(0, 212, 255, 0.3);
+}
+
+.project-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.project-link:hover {
+    color: var(--secondary-color);
+}
+
+/* ===================
+   CONTACT SECTION
+   =================== */
+.contact-section {
+    background: linear-gradient(135deg, var(--dark-bg) 0%, var(--dark-secondary) 100%);
+    padding: 100px 0;
+}
+
+.contact-form {
+    background: rgba(26, 26, 46, 0.5);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+.form-control {
+    background: rgba(26, 26, 46, 0.8);
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    border-radius: 10px;
+    color: #ffffff;
+    padding: 15px;
+}
+
+.form-control:focus {
+    background: rgba(26, 26, 46, 0.8);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(0, 212, 255, 0.25);
+    color: #ffffff;
+}
+
+.form-control::placeholder {
+    color: var(--text-light);
+}
+
+.contact-info {
+    color: var(--text-light);
+    margin-bottom: 15px;
+}
+
+.contact-info i {
+    color: var(--primary-color);
+    margin-right: 15px;
+    width: 20px;
+}
+
+/* ===================
+   PROJECT DETAIL PAGE
+   =================== */
+.project-detail {
+    display: none;
+    background: linear-gradient(135deg, var(--dark-bg) 0%, var(--dark-secondary) 100%);
+    min-height: 100vh;
+    padding: 100px 0;
+}
+
+.project-detail.active {
+    display: block;
+}
+
+.back-btn {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.back-btn:hover {
+    background: var(--primary-color);
+    color: var(--dark-bg);
+}
+
+.project-detail-card {
+    background: rgba(26, 26, 46, 0.8);
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    border-radius: 15px;
+    padding: 40px;
+}
+
+.project-meta {
+    background: rgba(0, 132, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.meta-item {
+    margin-bottom: 10px;
+}
+
+.meta-label {
+    color: var(--primary-color);
+    font-weight: 600;
+    display: inline-block;
+    width: 120px;
+}
+
+/* ===================
+   UTILITY CLASSES
+   =================== */
+.main-content.hidden {
+    display: none;
+}
+
+/* ===================
+   RESPONSIVE DESIGN
+   =================== */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .navbar-nav {
+        text-align: center;
+    }
+    
+    .social-links {
+        text-align: center;
+        margin: 20px 0;
+    }
+}
+
+/* Skills Section Styles */
+.skills-section {
+    margin: 30px 0;
+}
+
+.skills-title {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-item {
+    background: rgba(26, 26, 46, 0.6);
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    border-radius: 6px;
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.skill-item:hover {
+    transform: translateY(-2px);
+    border-color: var(--primary-color);
+    box-shadow: 0 5px 15px rgba(0, 212, 255, 0.2);
+    background: rgba(26, 26, 46, 0.8);
+}
+
+.skill-item i {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+}
+
+.skill-item span {
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* Responsive adjustments for skills */
+@media (max-width: 768px) {
+    .skills-grid {
+        gap: 6px;
+    }
+    
+    .skill-item {
+        padding: 4px 8px;
+    }
+    
+    .skill-item i {
+        font-size: 1rem;
+    }
+    
+    .skill-item span {
+        font-size: 0.75rem;
+    }
+}
+
+.project-video {
+    width: 100%;
+    max-width: 100%;
+}
+
+.video-fluid {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Rasio 16:9 */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
